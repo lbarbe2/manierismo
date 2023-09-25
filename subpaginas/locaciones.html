@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Manierismo - Locaciones</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <style>
+      #map {
+        height: 400px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1><a href="index.html">MANIERISMO</a></h1>
+    </header>
+    <nav>
+      <ul>
+        <li><div class="navbox"><a href="galeria.html">Galería</a></div></li>
+        <li><div class="navbox"><a href="artistas.html">Artistas</a></div></li>
+        <li><div class="navbox"><a href="historia.html">Historia</a></div></li>
+        <li><div class="navbox"><a href="locaciones.html">Locaciones</a></div></li>
+        <li><div class="navbox"><a href="cursos.html">Cursos</a></div></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <h2 class="subtitle">Locaciones</h2>
+      
+        <p> Locaciones de los museos que aún mantienen vivas algunas de las obras Manieristas</p>
+
+        <div id="map"></div>
+    
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+        <script>
+          // Initialize the map
+          var map = L.map('map').setView([40.416775, -3.703790], 2);
+        
+          // Create the tile layer
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+            maxZoom: 18,
+          }).addTo(map);
+        
+          // Add markers
+          var markers = [
+            {
+              name: 'Uffizi Gallery',
+              lat: 43.7679457,
+              lng: 11.2553145
+            },
+            {
+              name: 'Borghese Gallery',
+              lat: 41.9131,
+              lng: 12.4922
+            },
+            {
+              name: 'Museo de Arte de Toledo',
+              lat: 39.8616099,
+              lng: -4.0222123
+            },
+            {
+              name: 'Metropolitan Museum of Art',
+              lat: 40.779437,
+              lng: -73.963244
+            }
+          ];
+        
+          markers.forEach(function(marker) {
+            L.marker([marker.lat, marker.lng])
+              .addTo(map)
+              .bindPopup(marker.name);
+          });
+        </script>
+
+        <section>
+
+
+        </section>
+  
+    </div>
+
+
+    <footer>
+      <p>&copy; 2023 Manierismo. All rights reserved.</p>
+    </footer>
+    
+   
+  </body>
+</html>

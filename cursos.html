@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Manierismo - Cursos</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <div class="bg-shade-fff">
+    <header>
+      <h1><a href="index.html"> MANIERISMO </a></h1>
+    </header> 
+    <nav>
+      <ul>
+        <li><div class="navbox"><a href="galeria.html">Galería</a></div></li>
+        <li><div class="navbox"><a href="artistas.html">Artistas</a></div></li>
+        <li><div class="navbox"><a href="historia.html">Historia</a></div></li>
+        <li><div class="navbox"><a href="locaciones.html">Locaciones</a></div></li>
+        <li><div class="navbox"><a href="cursos.html">Cursos</a></div></li>
+      </ul>
+    </nav>
+    <div class="container">
+        <h2 class="subtitle"> Cursos </h2>
+        <p> Aprendé a pintar como los renacentistas en estos cursos de arte</p>
+        <section>
+            <p>
+                Inscribete a nuestras clases especiales <u>ONLINE</u>, que incluyen una clase para pintores nuevos y otro para avanzados. Los horarios varian dependiendo del nivel de la clase:
+                <br>
+                <br>
+                <span class="bold">Clase AMATEUR:</span> Febrero a Junio (Lunes de 5 a 7 PM)
+                <br>
+                <br>
+                <span class="bold">Clase Intermedia - Avanzada:</span> Febrero a Junio (Martes de 3 a 6 PM)
+            </p>
+            <div class="center">
+              <input class="input-cursos" type="checkbox" id="click">
+              <label for="click" class="click-me">Inscribime </label>
+              <div class="content-cursos">
+                <div class="text-cursos">
+                  Inscripción
+               </div>
+                  <label for="click" id="temp">x</label>
+          
+                  <form class="form-cursos" action="register.php" method="POST">
+          
+                  <label class="label-cursos" for="username">Nombre</label>
+                  <input class="input-cursos" type="text" placeholder="Name" id="username" required>
+          
+                  <label class="label-cursos" for="password">Clave</label>
+                  <input class="input-cursos" type="password" placeholder="Password" id="password" required>
+
+                  <label class="label-cursos" for="mail">Mail</label>
+                  <input class="input-cursos" type="email" placeholder="Mail" id="email" required>
+
+                  <select class="label-cursos" id="class" name="class">
+                    <option value="advanced">Clase Avanzada</option>
+                    <option value="beginner">Clase AMATEUR</option>
+                  </select>
+          
+                  <button type="submit">Registrar</button>
+          
+                  <p class="success-message"> Hecho! </p>
+              </form>
+                </div>
+              </div>
+            </div>
+    </section>
+      <div>
+        <img class="form-img" src="img/manierismo-3-pinturas.jpg" alt="">
+      </div>
+    </div>
+      <footer>
+        <div class="footer_logo-manierismo"> <a href="index.html">MAN<br>IERI<br>SMO</a> </div>
+ 
+        <div class="footer_search-logo"><a href="#"><img src="img/search-13-32.png" alt=""></a></div>
+         <div class="footer_search-bar"><input type="text" id="search" placeholder="buscar..."> </div>
+         
+       <div class="redes-sociales">
+         <div class="instagram"> <a href="#"><img src="img/instagram-logo.png" alt=""></a> </div>  <div class="facebook"> <a href="#"><img src="img/facebook-logo.png" alt=""></a> </div>  <div class="whatsapp"> <a href="#"><img src="img/whatsapp-logo.png" alt=""></a> </div>
+       </div>
+       </footer>
+
+      <script>
+        var registerButton = document.getElementById('register-button');
+        var popupForm = document.getElementById('popup-form');
+        var closeButton = popupForm.querySelector('.close-button');
+        var registrationForm = document.getElementById('registration-form');
+        var successMessage = popupForm.querySelector('.success-message');
+      
+        registerButton.addEventListener('click', function() {
+          popupForm.style.display = 'block';
+        });
+      
+        closeButton.addEventListener('click', function() {
+          popupForm.style.display = 'none';
+        });
+      
+        registrationForm.addEventListener('submit', function(event) {
+          event.preventDefault(); 
+      
+    
+          var nameInput = registrationForm.elements.name;
+          var surnameInput = registrationForm.elements.surname;
+          var emailInput = registrationForm.elements.email;
+      
+          if (nameInput.value.trim() === '' || surnameInput.value.trim() === '' || emailInput.value.trim() === '') {
+            alert('Please fill in all the fields');
+            return;
+          }
+      
+          successMessage.style.display = 'block';
+          registrationForm.reset();
+          registerButton.disabled = true;
+        });
+      </script>
+      
+
+  </body>
+</html>

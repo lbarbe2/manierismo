@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Manierismo - Cursos</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <h1><a href="index.html"> MANIERISMO </a></h1>
+    </header> 
+    <nav>
+      <ul>
+        <li><div class="navbox"><a href="galeria.html">Galería</a></div></li>
+        <li><div class="navbox"><a href="artistas.html">Artistas</a></div></li>
+        <li><div class="navbox"><a href="historia.html">Historia</a></div></li>
+        <li><div class="navbox"><a href="locaciones.html">Locaciones</a></div></li>
+        <li><div class="navbox"><a href="cursos.html">Cursos</a></div></li>
+      </ul>
+    </nav>
+    <div class="container">
+        <h2 class="subtitle"> Cursos </h2>
+        <p> Aprendé a pintar como los renacentistas en estos cursos de arte</p>
+        <section>
+            <p>
+                Inscribete a nuestras clases especiales <u>ONLINE</u>, que incluyen una clase para pintores nuevos y otro para avanzados. Los horarios varian dependiendo del nivel de la clase:
+                <br>
+                <br>
+                <bold>Clase AMATEUR:</bold> Febrero a Junio (Lunes de 5 a 7 PM)
+                <br>
+                <br>
+                <bold>Clase Intermedia - Avanzada:</bold> Febrero a Junio (Martes de 3 a 6 PM)
+            </p>
+        <button id="register-button">Inscribirme</button>
+        <div id="popup-form" class="popup-form">
+          <span class="close-button">&times;</span>
+          <h3>Registrame a una clase</h3>
+          <form id="registration-form" action="register.php" method="POST">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="surname">Apellido:</label>
+            <input type="text" id="surname" name="surname" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="class">Clase:</label>
+            <select id="class" name="class">
+              <option value="advanced">Clase Avanzada</option>
+              <option value="beginner">Clase AMATEUR</option>
+            </select>
+            <button type="submit">Registrar</button>
+          </form>
+          <p class="success-message">¡Hecho!</p>
+        </div>
+    </section>
+      </div>
+      <footer>
+        <p>&copy; 2023 Manierismo. All rights reserved.</p>
+      </footer>
+
+      <script>
+        var registerButton = document.getElementById('register-button');
+        var popupForm = document.getElementById('popup-form');
+        var closeButton = popupForm.querySelector('.close-button');
+        var registrationForm = document.getElementById('registration-form');
+        var successMessage = popupForm.querySelector('.success-message');
+      
+        registerButton.addEventListener('click', function() {
+          popupForm.style.display = 'block';
+        });
+      
+        closeButton.addEventListener('click', function() {
+          popupForm.style.display = 'none';
+        });
+      
+        registrationForm.addEventListener('submit', function(event) {
+          event.preventDefault(); 
+      
+    
+          var nameInput = registrationForm.elements.name;
+          var surnameInput = registrationForm.elements.surname;
+          var emailInput = registrationForm.elements.email;
+      
+          if (nameInput.value.trim() === '' || surnameInput.value.trim() === '' || emailInput.value.trim() === '') {
+            alert('Please fill in all the fields');
+            return;
+          }
+      
+          successMessage.style.display = 'block';
+          registrationForm.reset();
+          registerButton.disabled = true;
+        });
+      </script>
+      
+
+  </body>
+</html>

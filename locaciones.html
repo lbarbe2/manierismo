@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Manierismo - Locaciones</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <style>
+      #map {
+        height: 400px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-shade-fff">
+    <header>
+      <h1><a href="index.html">MANIERISMO</a></h1>
+    </header>
+    <nav>
+      <ul>
+        <li><div class="navbox"><a href="galeria.html">Galería</a></div></li>
+        <li><div class="navbox"><a href="artistas.html">Artistas</a></div></li>
+        <li><div class="navbox"><a href="historia.html">Historia</a></div></li>
+        <li><div class="navbox"><a href="locaciones.html">Locaciones</a></div></li>
+        <li><div class="navbox"><a href="cursos.html">Cursos</a></div></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <h2 class="subtitle">Locaciones</h2>
+      
+        <p> Locaciones de los museos que aún mantienen vivas algunas de las obras Manieristas</p>
+
+        <div id="map"></div>
+    
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+        <script>
+          // Initialize the map
+          var map = L.map('map').setView([40.416775, -3.703790], 2);
+        
+          // Create the tile layer
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+            maxZoom: 18,
+          }).addTo(map);
+        
+          // Add markers
+          var markers = [
+            {
+              name: 'Uffizi Gallery',
+              lat: 43.7679457,
+              lng: 11.2553145
+            },
+            {
+              name: 'Borghese Gallery',
+              lat: 41.9131,
+              lng: 12.4922
+            },
+            {
+              name: 'Museo de Arte de Toledo',
+              lat: 39.8616099,
+              lng: -4.0222123
+            },
+            {
+              name: 'Metropolitan Museum of Art',
+              lat: 40.779437,
+              lng: -73.963244
+            }
+          ];
+        
+          markers.forEach(function(marker) {
+            L.marker([marker.lat, marker.lng])
+              .addTo(map)
+              .bindPopup(marker.name);
+          });
+        </script>
+
+        <section>
+
+
+        </section>
+  
+    </div>
+
+    </div>
+    <footer>
+      <div class="footer_logo-manierismo"> <a href="index.html">MAN<br>IERI<br>SMO</a> </div>
+
+      <div class="footer_search-logo"><a href="#"><img src="img/search-13-32.png" alt=""></a></div>
+       <div class="footer_search-bar"><input type="text" id="search" placeholder="buscar..."> </div>
+       
+     <div class="redes-sociales">
+       <div class="instagram"> <a href="#"><img src="img/instagram-logo.png" alt=""></a> </div>  <div class="facebook"> <a href="#"><img src="img/facebook-logo.png" alt=""></a> </div>  <div class="whatsapp"> <a href="#"><img src="img/whatsapp-logo.png" alt=""></a> </div>
+     </div>
+     </footer>
+   
+  </body>
+</html>
