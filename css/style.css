@@ -79,10 +79,27 @@ h1 a{
   height: 180px;
   padding-top: 20px;
   background-color: rgba(0,0,0,0.4);
+
 }
 
 #mainheader h1 {
   font-size: 120px;
+}
+
+#mainheader p{
+color: #fff;
+font-size: 26px;
+ position: absolute;
+ padding: 20px;
+ top: 40px;
+ left: 86%;
+}
+
+#mainheader p a{
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
 }
 
 .subtitle{
@@ -91,7 +108,8 @@ h1 a{
 }
 
 .subtitle-2{
-  font-size: 18px;
+  font-size: 22px;
+  font-weight: 600;
 }
 
 .container {
@@ -191,7 +209,7 @@ footer {
   margin-left: 20px;
 }
 
-.footer_search-bar input[type="text"] {
+.footer_search-bar input[type="search"] {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 60px;
@@ -343,6 +361,13 @@ footer {
 
 /* Locaciones */
 
+.form-img-column{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .locations-column{
   display: flex;
   flex-direction: column;
@@ -357,8 +382,91 @@ footer {
 }
 
 
-
 /* Cursos */
+
+.texto-formulario{
+  text-align: left;
+}
+
+.formulario-cursos{
+ border: 2px solid #1F1E1E;
+ margin-top: 30px;
+ padding: 10px;
+ width: 400px;
+}
+
+.formulario-cursos label{
+  display:block;
+  text-align: left;
+}
+
+.formulario-cursos input, textarea{
+  display: block;
+  width: 380px;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+textarea{
+  max-width: 380px;
+  height: 100px;
+  max-height: 100px;
+}
+
+.form-img {
+  margin-top: 20px;
+  width: 800px;
+  margin-left: 200px;
+}
+
+
+/* Sign In */
+
+
+.form-signin{
+  border: 2px solid #1F1E1E;
+  border-radius: 6px;
+  margin-top: 30px;
+  padding: 40px;
+  width: 400px;
+ }
+ 
+ .form-signin label{
+   display:block;
+   text-align: left;
+ }
+ 
+ .form-signin input {
+   display: block;
+   width: 380px;
+   padding: 5px;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ .container-signin {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.sendto-text{
+  text-align: center;
+}
+
+#signin-submit{
+  color: white;
+  width: 100px;
+  background-color: green;
+}
+
+#login-submit{
+  color: white;
+  width: 100px;
+  background-color: green;
+}
+
+/* Cursos
 
 
 .center,.content-cursos
@@ -481,11 +589,6 @@ footer {
   color: #0a5878;
 }
 
-.form-img {
-  display: block;
-  margin-top: 50px;
-  padding-bottom: 50px;
-  width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
+
+*/
+

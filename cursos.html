@@ -23,7 +23,7 @@
         <h2 class="subtitle"> Cursos </h2>
         <p class="subtitle-2"> Aprendé a pintar como los renacentistas en estos cursos de arte</p>
         <section>
-            <p>
+            <p class="texto-formulario">
                 Inscribete a nuestras clases especiales <u>ONLINE</u>, que incluyen una clase para pintores nuevos y otro para avanzados. Los horarios varian dependiendo del nivel de la clase:
                 <br>
                 <br>
@@ -32,87 +32,55 @@
                 <br>
                 <span class="bold">Clase Intermedia - Avanzada:</span> Febrero a Junio (Martes de 3 a 6 PM)
             </p>
-            <div class="center">
-              <input class="input-cursos" type="checkbox" id="click">
-              <label for="click" class="click-me">Inscribime </label>
-              <div class="content-cursos">
-                <div class="text-cursos">
-                  Inscripción
-               </div>
-                  <label for="click" id="temp">x</label>
-          
-                  <form class="form-cursos" action="register.php" method="POST">
-          
-                  <label class="label-cursos" for="username">Nombre</label>
-                  <input class="input-cursos" type="text" placeholder="Name" id="username" required>
-          
-                  <label class="label-cursos" for="password">Clave</label>
-                  <input class="input-cursos" type="password" placeholder="Password" id="password" required>
+        <div class="form-img-column">
+            <div class="formulario-cursos">
+              <form action="registro.php" method="post">
+                <label>Nombre<br>
+                    <input type="text" name="nombre" required />
+                  </label><br />
+              <label>Apellido<br>
+                    <input type="text" name="apellido" required />
+                  </label><br />
+                  <label>Email<br>
+                    <input type="email" name="email" required />
+                  </label><br />
+                  <label> Clase <br>
+                    <select type="select" name="clase"> 
+                      <option value="advanced">Clase Avanzada</option>
+                      <option value="beginner">Clase AMATEUR</option>
+                    </select>
+                  </label><br />
+                  <label>Alguna pregunta?<br>
+                    <textarea type="comment" name="comentario"></textarea>
+                  </label><br />
 
-                  <label class="label-cursos" for="mail">Mail</label>
-                  <input class="input-cursos" type="email" placeholder="Mail" id="email" required>
-
-                  <select class="label-cursos" id="class" name="class">
-                    <option value="advanced">Clase Avanzada</option>
-                    <option value="beginner">Clase AMATEUR</option>
-                  </select>
-          
-                  <button class="cursos-registro" type="submit">Registrar</button>
-          
-                  <p class="success-message"> Hecho! </p>
+                  <label>
+                  <input type="submit" value="Enviar"/>	
               </form>
-                </div>
-              </div>
+            </div>    
+            <div>
+              <img class="form-img" src="img/manierismo-3-pinturas.jpg" alt="">
             </div>
+          </div> 
     </section>
-      <div>
-        <img class="form-img" src="img/manierismo-3-pinturas.jpg" alt="">
-      </div>
     </div>
       <footer>
         <div class="footer_logo-manierismo"> <a href="index.html">MAN<br>IERI<br>SMO</a> </div>
  
         <div class="footer_search-logo"><a href="#"><img src="img/search-13-32.png" alt=""></a></div>
-         <div class="footer_search-bar"><input type="text" id="search" placeholder="buscar..."> </div>
+        <div class="footer_search-bar">	<form action="resultados_buscar.php" method="post">
+          <label>
+          <input type="search" name="buscar" placeholder="Buscar..." />
+          </label>
+          </form>
+        </div>
          
        <div class="redes-sociales">
          <div class="instagram"> <a href="#"><img src="img/instagram-logo.png" alt=""></a> </div>  <div class="facebook"> <a href="#"><img src="img/facebook-logo.png" alt=""></a> </div>  <div class="whatsapp"> <a href="#"><img src="img/whatsapp-logo.png" alt=""></a> </div>
        </div>
        </footer>
 
-      <script>
-        var registerButton = document.getElementById('register-button');
-        var popupForm = document.getElementById('popup-form');
-        var closeButton = popupForm.querySelector('.close-button');
-        var registrationForm = document.getElementById('registration-form');
-        var successMessage = popupForm.querySelector('.success-message');
       
-        registerButton.addEventListener('click', function() {
-          popupForm.style.display = 'block';
-        });
-      
-        closeButton.addEventListener('click', function() {
-          popupForm.style.display = 'none';
-        });
-      
-        registrationForm.addEventListener('submit', function(event) {
-          event.preventDefault(); 
-      
-    
-          var nameInput = registrationForm.elements.name;
-          var surnameInput = registrationForm.elements.surname;
-          var emailInput = registrationForm.elements.email;
-      
-          if (nameInput.value.trim() === '' || surnameInput.value.trim() === '' || emailInput.value.trim() === '') {
-            alert('Please fill in all the fields');
-            return;
-          }
-      
-          successMessage.style.display = 'block';
-          registrationForm.reset();
-          registerButton.disabled = true;
-        });
-      </script>
       
 
   </body>
