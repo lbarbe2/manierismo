@@ -86,7 +86,9 @@ h1 a{
   font-size: 120px;
 }
 
-#mainheader p{
+/* Sign In Log In Buttons */
+
+.sign-in{
 color: #fff;
 font-size: 26px;
  position: absolute;
@@ -95,12 +97,40 @@ font-size: 26px;
  left: 86%;
 }
 
-#mainheader p a{
+.sign-in a{
   font-size: 26px;
   font-weight: 700;
   color: #fff;
   text-decoration: none;
 }
+
+.sign-in a:hover{
+  color: grey;
+
+}
+
+.sign-in-sub{
+  color: #fff;
+  font-size: 22px;
+   position: absolute;
+   padding: 20px;
+   top: 30px;
+   left: 86%;
+  }
+
+  .sign-in-sub a{
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .sign-in-sub a:hover{
+    color: grey;
+  
+  }
+
+  /* */
 
 .subtitle{
   font-size: 28px;
@@ -466,129 +496,57 @@ textarea{
   background-color: green;
 }
 
-/* Cursos
+/* REGISTRO-LOGIN */
 
-
-.center,.content-cursos
-{
-  position:absolute;
-  top:55%;
-  left:50%;
-  transform:translate(-50%,-50%);
-}
-.click-me
-{
-  color: #fff;
-  display:block;
-  width:160px;
-  height:50px;
-  background: green;
-  box-shadow: -3px -3px 7px #fffdfdcc,3px 3px 5px rgba(94, 104, 121, 0.342);
-  text-align:center;
-  font-size:22px;
-  line-height:50px;
-  cursor:pointer;
-}
-#click
-{
-  display:none;
-}
-.click-me:hover
-{
-  color: #0a5878;
-  background: #dde1e7;
-}
-.content-cursos
-{
-  visibility:hidden;  
-  width: 330px;
-  height: auto;
-  background: #dde1e7;
-  padding: 30px 35px 40px;
-  box-sizing: border-box;
-  border-radius: 5px;
-}
-#temp
-{
-  position:absolute;
-  right:10px;
-  top:20px;
-  font-size:25px;
-  background: #dde1e7;
-  padding: 3px;
-  padding-left: 11px;
-  padding-right: 11px;
-  border-radius: 50%;
-  cursor:pointer;
-}
-#click:checked~.content-cursos
-{
-  opacity:1;
-  visibility:visible;
-}
-.text-cursos
-{
-  font-size: 30px;
-  color: #000000;
-  font-weight: 600;
-  text-align: center;
-  letter-spacing: 2px;
-}
-.form-cursos
-{
-  margin-top: 40px;
-}
-.label-cursos
-{
-  display: block;
-  margin-top: 30px;
-  font-size: 16px;
-  font-weight: 500;
-}
-.input-cursos
-{
-  display: block;
-  height: 43px;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 3px;
-  border: none;
-
-  margin-top: 8px;
-
-  font-size: 14px;
-  font-weight: 300;
-}
-::placeholder
-{
-  color: #4b4e4d;
-  padding-left: 10px;
-}
-
-.success-message {
-  display: none;
+.successful-login-message{ 
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-evenly; 
+  margin-top: 30px; 
+  margin-left: auto; 
+  margin-right: auto; 
+  font-size: 26px; 
   font-weight: 700;
-  color: green;
-  margin-top: 20px;
 }
 
-.cursos-registro
-{
-  width: 100%;
-  margin-top: 35px;
-  padding: 12px;
-  background: #dde1e7;
-  border: solid;
-  font-size: 17px;
-  font-weight: 600;
-  margin-bottom: 32px;
-  cursor:pointer;
-}
+  .link-miperfil a{
+    display: flex; 
+    justify-content: center; 
+    margin-top: 30px; 
+    font-size: 26px; 
+    font-weight: 700;
+    text-decoration: none;
+    color: blue;
+    padding-bottom: 50px;
+  }
 
-.cursos-registro:hover{
-  color: #0a5878;
-}
+  .link-miperfil a:hover{
+    color: #f8ea20;
+  }
 
+  .failed-panel{
+    display: flex; 
+    justify-content: center; 
+    padding-top: 30px; 
+    font-size: 26px; 
+  }
 
-*/
+  .failed-panel a{
+    display: flex; 
+    justify-content: center; 
+    font-size: 26px; 
+    color: blue;
+    padding-bottom: 50px;
+  }
 
+  .failed-panel a:hover{
+    color: #f8ea20;
+  }
+
+  
+  .panel{
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  padding-top: 30px; 
+  }

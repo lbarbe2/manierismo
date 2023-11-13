@@ -28,13 +28,14 @@ if($resultado!=0){
 	$_SESSION['nombre']=$respuesta['nombre'];
 	$_SESSION['apellido']=$respuesta['apellido'];
 		
-		echo "<h2 style='display: flex; flex-direction: row; justify-content: space-evenly; margin-top: 30px; margin-left: auto; margin-right: auto; font-size: 26px; font-weight: 700;'> Hola ".$_SESSION['nombre']." ".$_SESSION['apellido']."<br />";
-		echo "Ya podes acceder a tu perfil. ";
-		echo "<br><br><a href='panel.php' style='padding-bottom: 50px; margin-top: 20px;'>Mi Perfil</a>";	
+		echo "<span class='successful-login-message'> Hola ".$_SESSION['nombre']." ".$_SESSION['apellido']."<br /> </span>";
+		echo "<span class='successful-login-message'>Ya podes acceder a tu perfil.</span> ";
+		echo "<br><br><span class='link-miperfil'><a href='panel.php'>Mi Perfil</a></span>";	
 
 }else{
-	echo "No es un usuario registrado";
-	include ("form_registro.php");
+	echo "<span class='successful-login-message'> No es un usuario registrado o su contraseña/mail es incorrecto </span>";
+
+	echo "<br><br> <span class='link-miperfil'><a href='login.html'>volver a intentar</a> </span>";
 }
 
 
@@ -45,6 +46,8 @@ if($resultado!=0){
 
 
 ?>
+
 </div>
+
 </body>
 </html>

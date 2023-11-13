@@ -25,15 +25,16 @@
 
 	if($resultado!=0){
 		$respuesta=mysqli_fetch_array($consulta);
+		header("Location:registro-login.php");
 	
 	}else{
-		
+		echo "Se encontró un error, vuelva a intentar.";
 	}
 
 
 
 ?>	
-    
+ 
 
 </body>
 </html>
